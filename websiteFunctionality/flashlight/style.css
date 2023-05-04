@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 8vw;
+    margin: 0 15px;
+    width: 70vw;
+    text-align: center;
+}
+
+.side {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    overflow: hidden;
+    background-color: #1d1c1c;
+}
+
+#layer-1 {
+    color: #755e5e;
+    z-index: 1;
+}
+
+#layer-2 {
+    color: #981919;
+    background-color: #451c1c;
+}
