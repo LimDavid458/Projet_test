@@ -7,15 +7,25 @@
 .cards {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: #27293f;
-    gap: 20px;
+}
+
+.media-scroller {
+    height: 50vh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 18%;
+
+    scroll-snap-type: inline mandatory;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    gap: 10px;
+    padding: 10px;
 }
 
 .card {
-    width: 200px;
-    height: 300px;
     border: 2px solid black;
     overflow: hidden;
     cursor: pointer;
