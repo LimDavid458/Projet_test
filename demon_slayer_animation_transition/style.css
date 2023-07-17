@@ -13,6 +13,18 @@ body {
     align-items: center;
 }
 
+.layer-background {
+    position: absolute;
+    height: 100vh;
+    width: 50vw;
+    align-self: flex-start;
+    overflow: hidden;
+}
+
+.layer-background img {
+    height: 100%;
+}
+
 .container {
     height: 450px;
     width: 750px;
@@ -22,6 +34,13 @@ body {
     place-items: start;
     overflow: hidden;
     border-radius: 30px;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.container:hover {
+    border-radius: initial;
 }
 
 @keyframes top-move {
@@ -146,20 +165,4 @@ body {
     top: 5%;
     background-color: white;
     border-radius: 100%;
-}
-
-#playAnimation {
-    font-size: 20px;
-    height: 80px;
-    width: 180px;
-    border-radius: 30px;
-    cursor: pointer;
-    border: none;
-    margin-top: 20px;
-    box-shadow: 2px 5px 2px black;
-}
-
-#playAnimation:hover {
-    background-color: darkorchid;
-    transform: scale(80%);
 }
