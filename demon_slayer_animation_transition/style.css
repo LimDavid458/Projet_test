@@ -19,10 +19,54 @@ body {
     width: 50vw;
     align-self: flex-start;
     overflow: hidden;
+    opacity: 0.7;
 }
 
 .layer-background img {
     height: 100%;
+}
+
+.bubbles-container {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    align-self: flex-start;
+}
+
+.bubbles {
+    display: flex;
+    gap: 20px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-10vh) scale(0);
+    }
+    100% {
+        transform: translateY(100vh) scale(1);
+    }
+}
+
+span {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    background: #f44c7e;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #f44c7e, 0px 0px 50px #f87ca1,
+        0px 0px 100px #fba7c0;
+
+    animation: animate 15s linear infinite;
+    animation-duration: calc(
+        500s / var(--i)
+    ); /*calcul duration of animation with var in html*/
+}
+
+span:nth-child(even) {
+    background: #562135;
+    box-shadow: 0px 0px 10px #562135, 0px 0px 50px #c3829e,
+        0px 0px 100px #e9b1cd;
 }
 
 .container {
