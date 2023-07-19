@@ -3,6 +3,10 @@ const secretWord = document.getElementById('secretWord');
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+/**
+ * Encryption letters
+ * @param {string} stringToTransform
+ */
 function transformToRot13(stringToTransform) {
     let newString = '';
     let index;
@@ -21,6 +25,10 @@ function transformToRot13(stringToTransform) {
     randomLetter(newString);
 }
 
+/**
+ * Letter scroll effect
+ * @param {string} word
+ */
 function randomLetter(word) {
     let iterations = 0;
     secretWord.dataset.value = word.toUpperCase();
