@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+.btn {
+    padding: 0 10px;
+    cursor: pointer;
+    height: 25px;
+}
+
+form {
+    display: flex;
+}
+
+#task-new {
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+}
+
+#task-new:focus::placeholder {
+    opacity: 0.2;
+}
+
+.btn-new {
+    background: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 900;
+    border: 0;
+}
+
+.btn-new label {
+    pointer-events: none;
+}
+
+.todo-list {
+    height: 300px;
+    width: 350px;
+    background-color: lightblue;
+    overflow: auto;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    display: flex;
+}
+
+.task:nth-child(even) .text {
+    background-color: aliceblue;
+}
+
+.text {
+    flex: 1;
+    border: none;
+    background-color: beige;
+    padding-left: 10px;
+}
